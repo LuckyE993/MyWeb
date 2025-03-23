@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Utilities & Z-index</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-bottom: 2%;
+            padding-top: 2%;
+        }
+    </style>
+</head>
+
+<body>
+      <div class="container mb-5">
+        <h1 class="text-center fw-bold mb-4">Bootstrap 5 Utilities</h1>
+    
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">1. 间距工具（Spacing）</h3>
+            </div>
+            <div class="card-body">
+                <p class="lead">语法：<code>{property}{sides}-{size}</code></p>
+                
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <h5>外边距 (margin)</h5>
+                        <div class="border p-2 position-relative" style="height: 200px;">
+                            <div class="bg-light m-3 p-2 border">m-3（四周 margin: 1rem）</div>
+                            <div class="bg-info mt-2 mb-4 mx-auto p-2 text-center border" style="width: 200px;">
+                                mt-2 mb-4 mx-auto<br>（上下边距+水平居中）
+                            </div>
+                            <div class="bg-danger text-white mt-n2 p-2 border">mt-n2（上方负边距 -0.5rem）</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>内边距 (padding)</h5>
+                        <div class="border" style="height: 200px;">
+                            <div class="bg-warning p-3 border mb-2">p-3（内边距 1rem）</div>
+                            <div class="bg-success px-4 py-2 text-white border mb-2">px-4 py-2（水平1.5rem，垂直0.5rem）</div>
+                            <div class="bg-primary px-lg-5 py-2 text-white border">响应式内边距（大屏左右 3rem）</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info">
+                    <strong>尺寸对应关系：</strong>
+                    <ul class="mb-0">
+                        <li>0: 0</li>
+                        <li>1: 0.25rem (4px)</li>
+                        <li>2: 0.5rem (8px)</li>
+                        <li>3: 1rem (16px)</li>
+                        <li>4: 1.5rem (24px)</li>
+                        <li>5: 3rem (48px)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">2. 尺寸工具（Sizing）</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>宽度设置</h5>
+                        <div class="border p-2 mb-3">
+                            <div class="w-25 bg-primary p-2 text-white mb-2">w-25（25%宽度）</div>
+                            <div class="w-50 bg-success p-2 text-white mb-2">w-50（50%宽度）</div>
+                            <div class="w-75 bg-danger p-2 text-white mb-2">w-75（75%宽度）</div>
+                            <div class="w-100 bg-warning p-2 mb-2">w-100（100%宽度）</div>
+                            <div class="w-auto bg-info p-2">w-auto（自动宽度）</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>高度设置</h5>
+                        <div class="border p-2" style="height: 200px;">
+                            <div class="d-flex h-100">
+                                <div class="h-25 bg-info p-2 me-2">h-25</div>
+                                <div class="h-50 bg-success p-2 text-white me-2">h-50</div>
+                                <div class="h-75 bg-warning p-2 me-2">h-75</div>
+                                <div class="h-100 bg-danger p-2 text-white">h-100</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="col-md-12">
+                        <h5>最大/最小尺寸</h5>
+                        <div class="border p-2">
+                            <div class="mw-100 bg-primary p-2 text-white mb-2">mw-100 (最大宽度100%)</div>
+                            <div class="min-vw-50 bg-success p-2 text-white mb-2">min-vw-50 (最小宽度为视口宽度的50%)</div>
+                            <div style="height: 50px;">
+                                <div class="h-100 mh-100 bg-info p-2">mh-100 (最大高度100%)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0">3. 定位工具（Position）</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>静态与相对定位</h5>
+                        <div class="border position-relative p-3 mb-3" style="height: 150px;">
+                            <div class="position-static bg-light p-2 mb-2 border">static 定位（默认）</div>
+                            <div class="position-relative bg-info p-2 border" style="left: 20px; top: 10px;">
+                                relative 定位（向右20px，向下10px）
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>绝对定位</h5>
+                        <div class="border position-relative p-3" style="height: 150px;">
+                            <div class="position-absolute top-0 start-0 bg-primary p-2 text-white">左上角</div>
+                            <div class="position-absolute top-0 end-0 bg-success p-2 text-white">右上角</div>
+                            <div class="position-absolute bottom-0 start-0 bg-danger p-2 text-white">左下角</div>
+                            <div class="position-absolute bottom-0 end-0 bg-warning p-2">右下角</div>
+                            <div class="position-absolute top-50 start-50 translate-middle bg-dark text-white p-2">中心点</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h5>粘性定位示例</h5>
+                        <div class="border overflow-auto" style="height: 150px;">
+                            <div class="position-sticky top-0 bg-primary text-white p-2 mb-2">
+                                这是粘性导航栏（向下滚动时会固定在顶部）
+                            </div>
+                            <p>滚动内容...</p>
+                            <p>更多内容...</p>
+                            <p>更多内容...</p>
+                            <p>更多内容...</p>
+                            <p>更多内容...</p>
+                            <div class="position-sticky bottom-0 bg-success text-white p-2 mt-2">
+                                这是粘性页脚（向上滚动时会固定在底部）
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="alert alert-warning mt-3">
+                    <i class="bi bi-exclamation-triangle me-2"></i>
+                    <strong>注意：</strong> fixed 定位会相对于视口定位，可能会跳出当前容器
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-4">
+            <div class="card-header bg-info text-dark">
+                <h3 class="mb-0">4. 显示与可见性（Display & Visibility）</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>基本显示属性</h5>
+                        <div class="border p-2 mb-3">
+                            <span class="d-block bg-primary text-white p-2 mb-2">d-block（块级元素）</span>
+                            <span class="d-inline bg-success text-white p-2 me-2">d-inline</span>
+                            <span class="d-inline bg-info p-2">d-inline</span>
+                            <div class="mt-2">
+                                <span class="d-inline-block bg-warning p-2 me-2" style="width: 100px;">d-inline-block</span>
+                                <span class="d-inline-block bg-danger text-white p-2" style="width: 100px;">d-inline-block</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>响应式显示</h5>
+                        <div class="border p-2">
+                            <div class="d-none d-md-block bg-primary text-white p-2 mb-2">
+                                仅在 md 及以上显示（≥768px）
+                            </div>
+                            <div class="d-block d-lg-none bg-warning p-2 mb-2">
+                                仅在 lg 以下显示（<992px）
+                            </div>
+                            <div class="d-none d-sm-block d-md-none bg-success text-white p-2">
+                                仅在 sm 显示（≥576px 且 <768px）
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <h5>Flexbox 显示</h5>
+                        <div class="border p-2">
+                            <div class="d-flex justify-content-between mb-2">
+                                <div class="p-2 bg-primary text-white">Flex 项目 1</div>
+                                <div class="p-2 bg-success text-white">Flex 项目 2</div>
+                                <div class="p-2 bg-info">Flex 项目 3</div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end">
+                                <div class="p-2 bg-warning mb-2" style="width: 200px;">Flex 列项目 1</div>
+                                <div class="p-2 bg-danger text-white mb-2" style="width: 150px;">Flex 列项目 2</div>
+                                <div class="p-2 bg-dark text-white" style="width: 100px;">Flex 列项目 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h3 class="mb-0">5. 文本与颜色工具</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>文本对齐</h5>
+                        <div class="border p-2 mb-3">
+                            <p class="text-start bg-light p-1">文本左对齐 (text-start)</p>
+                            <p class="text-center bg-light p-1">文本居中 (text-center)</p>
+                            <p class="text-end bg-light p-1">文本右对齐 (text-end)</p>
+                            <p class="text-md-center text-lg-end bg-light p-1">响应式文本对齐</p>
+                        </div>
+                        <h5>文本样式</h5>
+                        <div class="border p-2">
+                            <p class="text-lowercase">全部小写 (TEXT LOWERCASE)</p>
+                            <p class="text-uppercase">全部大写 (text uppercase)</p>
+                            <p class="text-capitalize">首字母大写 (text capitalize)</p>
+                            <p class="fw-bold">粗体文本 (fw-bold)</p>
+                            <p class="fst-italic">斜体文本 (fst-italic)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>颜色系统</h5>
+                        <div class="border p-2 mb-3">
+                            <p class="text-primary">主要文本颜色 (text-primary)</p>
+                            <p class="text-secondary">次要文本颜色 (text-secondary)</p>
+                            <p class="text-success">成功文本颜色 (text-success)</p>
+                            <p class="text-danger">危险文本颜色 (text-danger)</p>
+                            <p class="text-warning">警告文本颜色 (text-warning)</p>
+                            <p class="text-info">信息文本颜色 (text-info)</p>
+                            <p class="text-dark">深色文本 (text-dark)</p>
+                            <p class="text-light bg-dark">浅色文本 (text-light)</p>
+                        </div>
+                        <h5>背景颜色</h5>
+                        <div class="border p-2">
+                            <div class="bg-primary text-white p-2 mb-1">主要背景 (bg-primary)</div>
+                            <div class="bg-secondary text-white p-2 mb-1">次要背景 (bg-secondary)</div>
+                            <div class="bg-success text-white p-2 mb-1">成功背景 (bg-success)</div>
+                            <div class="bg-danger text-white p-2 mb-1">危险背景 (bg-danger)</div>
+                            <div class="bg-warning p-2 mb-1">警告背景 (bg-warning)</div>
+                            <div class="bg-info p-2 mb-1">信息背景 (bg-info)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+       <div class="container my-5">
+        <h1 class="text-center fw-bold mb-4">Bootstrap 5 Z-index 层级控制</h1>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">1. 预定义层级</h3>
+            </div>
+            <div class="card-body">
+                <p class="lead mb-3">Bootstrap 5 内置了以下层级等级：</p>
+                
+                <div class="position-relative mb-3" style="height: 200px;">
+                    <div class="position-absolute start-0 top-0 bg-primary p-3 z-3 text-white shadow-sm">z-3 (最高)</div>
+                    <div class="position-absolute start-3 top-3 bg-success p-3 z-2 text-white shadow-sm">z-2</div>
+                    <div class="position-absolute start-6 top-6 bg-warning p-3 z-1">z-1</div>
+                    <div class="position-absolute start-9 top-9 bg-danger p-3 z-0 text-white">z-0 (最低)</div>
+                </div>
+                
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle me-2"></i>
+                    层级值越大，元素显示在越上层
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">2. 组件默认层级</h3>
+            </div>
+            <div class="card-body">
+                <p>Bootstrap 组件有各自的默认层级值：</p>
+                
+                <pre class="bg-light p-3 rounded">
+    $zindex-dropdown:        1000;
+    $zindex-sticky:          1020;
+    $zindex-fixed:           1030;
+    $zindex-offcanvas:       1040;
+    $zindex-modal-backdrop:  1050;
+    $zindex-modal:           1060;
+    $zindex-popover:         1070;
+    $zindex-tooltip:         1080;</pre>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h3 class="mb-0">3. 自定义层级</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>HTML 使用方式</h5>
+                        <div class="bg-light p-3 rounded">
+                            <code>&lt;div class="z-index-9999"&gt;自定义层级元素&lt;/div&gt;</code>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <h5>Sass 自定义方式</h5>
+                        <pre class="bg-light p-3 rounded">
+    $custom-zindex: 9999;
+    .custom-element {
+      z-index: $custom-zindex;
+    }</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div class="container my-5">
+        <h1 class="text-center fw-bold mb-4">Bootstrap 5 最佳实践</h1>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">工具类使用原则</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i>优先使用工具类</h5>
+                        <p>减少自定义CSS代码量，提高开发效率</p>
+                        <div class="alert alert-success">
+                            <code>&lt;div class="p-3 m-2 bg-light rounded shadow-sm"&gt;内容&lt;/div&gt;</code>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i>响应式设计</h5>
+                        <p>结合断点使用，实现不同屏幕尺寸下的最佳展示效果</p>
+                        <div class="alert alert-success">
+                            <code>&lt;div class="mt-2 mt-md-4 p-3 p-lg-5"&gt;响应式内容&lt;/div&gt;</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">层级管理原则</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-primary">
+                            <div class="card-header bg-primary bg-opacity-25">普通元素</div>
+                            <div class="card-body">
+                                <p>使用 <code>z-0</code> 到 <code>z-3</code> 的层级</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">z-0：最底层</li>
+                                    <li class="list-group-item">z-1：中间层</li>
+                                    <li class="list-group-item">z-2：较高层</li>
+                                    <li class="list-group-item">z-3：普通元素最高层</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-warning">
+                            <div class="card-header bg-warning bg-opacity-25">组件层级</div>
+                            <div class="card-body">
+                                <p>使用预定义层级值</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item">下拉菜单: 1000</li>
+                                    <li class="list-group-item">粘性元素: 1020</li>
+                                    <li class="list-group-item">固定元素: 1030</li>
+                                    <li class="list-group-item">模态框: 1060</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-danger">
+                            <div class="card-header bg-danger bg-opacity-25">避免的做法</div>
+                            <div class="card-body">
+                                <div class="alert alert-danger">
+                                    <i class="bi bi-exclamation-triangle-fill me-2"></i>避免使用随机大值
+                                </div>
+                                <p>不推荐: <code>z-index: 9999;</code></p>
+                                <p>不推荐: <code>z-index: 100000;</code></p>
+                                <p>这会导致层级冲突和管理混乱</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-info text-dark">
+                <h3 class="mb-0">定位注意事项</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>绝对定位</h5>
+                        <div class="alert alert-info">
+                            <p><i class="bi bi-info-circle-fill me-2"></i>绝对定位元素需要父级设置 <code>position-relative</code></p>
+                        </div>
+                        <div class="position-relative border p-4 mb-3" style="height: 100px;">
+                            <div class="position-absolute top-0 start-0 bg-primary text-white p-2">左上角</div>
+                            <div class="position-absolute bottom-0 end-0 bg-primary text-white p-2">右下角</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>粘性定位</h5>
+                        <div class="alert alert-info">
+                            <p><i class="bi bi-info-circle-fill me-2"></i>粘性定位需要指定方向值（如 <code>top-0</code>）</p>
+                        </div>
+                        <div class="overflow-auto border" style="height: 120px;">
+                            <div class="p-2">滚动内容...</div>
+                            <div class="position-sticky top-0 bg-warning p-2">我会粘在顶部</div>
+                            <div class="p-2">更多内容...</div>
+                            <div class="p-2">更多内容...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header bg-dark text-white">
+                <h3 class="mb-0">实际应用示例</h3>
+            </div>
+            <div class="card-body">
+                <div class="position-relative border p-3" style="height: 300px;">
+                    <!-- 模拟导航栏 -->
+                    <div class="position-absolute top-0 start-0 end-0 bg-dark text-white p-3 z-3">
+                        导航栏 (z-3)
+                    </div>
+                    
+                    <!-- 模拟内容卡片 -->
+                    <div class="position-absolute top-50 start-50 translate-middle bg-white p-3 border shadow-lg z-1" style="width: 80%;">
+                        <h5>内容卡片 (z-1)</h5>
+                        <p>正常内容层级</p>
+                    </div>
+                    
+                    <!-- 模拟弹出提示 -->
+                    <div class="position-absolute top-25 start-75 bg-warning p-2 shadow z-2" style="width: 150px;">
+                        弹出提示 (z-2)
+                    </div>
+                    
+                    <!-- 模拟底层背景 -->
+                    <div class="position-absolute top-0 start-0 end-0 bottom-0 bg-light z-0 d-flex align-items-end justify-content-end">
+                        <span class="p-2 text-muted">背景层 (z-0)</span>
+                    </div>
+                    
+                    <!-- 模拟浮动按钮 -->
+                    <div class="position-absolute bottom-0 end-0 m-3 z-3">
+                        <button class="btn btn-primary rounded-circle shadow-lg">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

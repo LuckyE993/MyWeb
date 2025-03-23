@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        /* 添加页面底部间距 */
+        body {
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 5vh;
+            /* 使用视口高度的5%作为底部间距 */
+        }
+
+        /* 或者为最后一个容器添加底部间距 */
+        .bottom-space {
+            margin-bottom: 5vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Bootstrap 5 Layout Grid</h1>
+    </div>
+    <div class="container">
+        <h1 class="text-center mt-5">Grid Introduction</h1>
+        <p>Bootstrap 5 Layout Grid system 是响应式的，配备了 flexbox（弹性盒子），并允许页面最多分为 12 列。您可以将列组合在一起。这个网格系统是一个强大的移动优先响应式
+            flexbox（弹性盒子）网格。</p>
+
+        <p>其工作原理如下：</p>
+
+        <ul>
+            <li>网格系统支持六个响应式断点。您可以通过每个断点来控制 container（容器）、column（列）的大小和行为。</li>
+            <li>Containers（容器）用于居中并水平填充您的内容。使用 <code>.container</code> 类来实现响应式宽度，使用 <code>.container-fluid</code> 类来实现所有
+                viewport（视口）和 device（设备）上的 100% 宽度。使用 <code>.container-md</code> 类来同时实现 fluid（流体）宽度和 pixel（像素）宽度。</li>
+            <li>Rows（行）是 columns（列）的 wrapper（包装器）。每列都有水平 padding（内边距，称为 gutter（沟槽）），用于控制它们之间的空间。</li>
+            <li>Columns（列）非常灵活。每行有 12 个 template columns（模板列）可供使用，允许您创建跨越任意数量列的不同元素组合。</li>
+            <li>Gutters（沟槽）也是响应式的，并且可以在所有 breakpoints（断点）上进行自定义。我们可以使用 <code>.gx-*</code> 来改变 horizontal
+                gutters（水平沟槽），使用 <code>.gy-*</code> 来改变 vertical gutters（垂直沟槽）。</li>
+        </ul>
+
+        <p>Bootstrap 5 Layout Grid System 的特点：</p>
+
+        <ul>
+            <li><strong>Grid options（网格选项）</strong>：Bootstrap 的网格系统适用于所有六个 breakpoints（断点），即 xs、sm、md、lg、xl、xxl。</li>
+            <li><strong>Auto-layout columns（自动布局列）</strong>：这提供了无需显式 numbered class（编号类）即可轻松创建列大小的功能。</li>
+            <li><strong>Responsive classes（响应式类）</strong>：它们提供了 predefined classes（预定义的类），用于构建复杂的响应式、动态和灵活的布局。</li>
+            <li><strong>Nesting（嵌套）</strong>：我们需要为 nesting（嵌套）添加一个新的 row（行）和一组 columns（列），这包括一组加起来等于或少于 12 的列。</li>
+            <li><strong>Sass</strong>：该系统还提供了 Sass variables（变量）和 mixins（混合），用于创建自定义和响应式的页面布局。</li>
+            <li><strong>Customizing the grid（自定义网格）</strong>：这用于通过使用内置的 grid Sass variables（网格 Sass 变量）和
+                map（映射）来按需自定义您的网格。</li>
+        </ul>
+    </div>
+    <div class="container m-2 mx-auto text-center">
+        <h1 class="text-success"> GeeksforGeeks </h1>
+        <h3>BootStrap5 Layout Grid system</h3>
+
+        <section class="container">
+            <section class="row">
+                <section class="col border bg-success">
+                    GFG Column 1
+                </section>
+                <section class="col border bg-secondary">
+                    GFG Column 2
+                </section>
+                <section class="col border bg-danger">
+                    GFG Column 3
+                </section>
+            </section>
+            <br>
+            <section class="row">
+                <section class="col border bg-warning">
+                    GFG Column 1
+                </section>
+                <section class="col-6 border bg-light">
+                    GFG Column 2
+                </section>
+                <section class="col border bg-info">
+                    GFG Column 3
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <div class="container m-2 mx-auto text-center">
+        <h1 class="text-success"> GeeksforGeeks </h1>
+        <section class="container">
+            <section class="row">
+                <section class="col border bg-danger">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-secondary">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-primary">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-info">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-warning">
+                    GeeksforGeeks
+                </section>
+            </section>
+            <br><br>
+            <section class="row">
+                <section class="col border bg-secondary">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-success">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-danger">
+                    GeeksforGeeks
+                </section>
+                <section class="col border bg-primary">
+                    GeeksforGeeks
+                </section>
+            </section>
+        </section>
+    </div>
+
+    <div class="container bottom-space">
+        <h1 class="text-center mt-5">Bootstrap 5 Layout Column</h1>
+
+        <p>Bootstrap 5 列（Columns）通过使用 flexbox 网格系统，提供了对齐、排序和偏移列的不同选项。可以利用不同的列类来管理非网格元素的宽度。</p>
+
+        <p>Bootstrap 5 列：以下组件用于帮助垂直和水平对齐列，并重新排序它们，具体描述如下：</p>
+
+        <h2>对齐（Alignment）</h2>
+        <p>它利用 flexbox 对齐来垂直或水平排列项目。它有四种对齐方式：</p>
+        <ul>
+            <li><strong>垂直对齐（Vertical alignment）：</strong>用于垂直对齐项目。</li>
+            <li><strong>水平对齐（Horizontal alignment）：</strong>用于水平对齐项目。</li>
+            <li><strong>列换行（Column Wrapping）：</strong>用于将溢出的列换行到新的一行。</li>
+            <li><strong>列断行（Column Breaks）：</strong>用于将列断行到新的一行。</li>
+        </ul>
+
+        <h2>重新排序（Reordering）</h2>
+        <p>它用于根据 HTML 元素上给定的 Bootstrap 5 类重新排列列中的项目。它有两种重新排序方式：</p>
+        <ul>
+            <li><strong>排序类（Order Classes）：</strong>用于使用 order 类控制内容的视觉顺序，这些类是响应式的。</li>
+            <li><strong>偏移列（Offsetting Columns）：</strong>用于使用 offset 网格类控制内容的顺序。</li>
+        </ul>
+
+        <h2>独立列情况（Standalone Column Cases）</h2>
+        <p>默认情况下，它用于为元素提供特定宽度，且没有内边距（padding）。</p>
+        <h1 class="text-success">
+            GeeksforGeeks
+        </h1>
+        <h3>Bootstrap 5 Columns</h3>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-2 text-white bg-primary">
+                    Col 2
+                </div>
+                <div class="col-3 text-white bg-secondary">
+                    Col 3
+                </div>
+                <div class="col-4 text-white bg-info">
+                    Col 4
+                </div>
+            </div>
+        </div>
+        <p>为连续的列分配不同的排序和宽度。</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-2 text-white 
+                            bg-primary order-2">
+                    Order 2
+                </div>
+                <div class="col-3 text-white 
+                            bg-secondary order-3">
+                    Order 3
+                </div>
+                <div class="col-4 text-white 
+                            bg-info order-1">
+                    Order 1
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container mb-4">
+            <h1 class="text-center mt-5">Bootstrap 5 Layout Gutter</h1>
+
+            <div class="card my-4">
+                <div class="card-body">
+                    <p class="card-text">
+                        在 Bootstrap 的网格布局中，Gutters（沟槽）指的是列之间的间隙。可以通过使用 gutter 修改类来改变这些沟槽的宽度。
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="mb-3">Bootstrap 5 布局 Gutter 修改类：</h3>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item">
+                    <code class="fw-bold">g-*</code>：此类用于设置所有方向（水平和垂直）的沟槽宽度。
+                </li>
+                <li class="list-group-item">
+                    <code class="fw-bold">gx-*</code>：此类用于设置水平方向上的沟槽宽度。
+                </li>
+                <li class="list-group-item">
+                    <code class="fw-bold">gy-*</code>：此类用于设置垂直方向上的沟槽宽度。
+                </li>
+            </ul>
+
+            <div class="alert alert-info">
+                <p class="mb-0">
+                    <i class="bi bi-info-circle me-2"></i>
+                    其中 <code>*</code> 可以取值为 0 到 5。数值越大，间隙越宽。
+                </p>
+            </div>
+
+            <div> 
+                <div class="text-center"> 
+                    <h1 class="text-success"> 
+                        GeeksforGeeks 
+                    </h1> 
+                    <strong>Bootstrap 5 Layout Gutters</strong> 
+                </div> 
+          
+                <div class="container text-center"> 
+                    <div class="row gx-5"> 
+                        <div class="col-6"> 
+                            <div class="p-4 border bg-danger"> 
+                                Column 1 
+                            </div> 
+                        </div> 
+                        <div class="col-6"> 
+                            <div class="p-4 border bg-success"> 
+                                Column 2 
+                            </div> 
+                        </div> 
+                    </div> 
+          
+                    <div class="row gx-2"> 
+                        <div class="col-4"> 
+                            <div class="p-4 border bg-info"> 
+                                Column 1 
+                            </div> 
+                        </div> 
+                        <div class="col-4"> 
+                            <div class="p-4 border text-bg-dark"> 
+                                Column 2 
+                            </div> 
+                        </div> 
+                        <div class="col-4"> 
+                            <div class="p-4 border bg-warning"> 
+                                Column 3 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4nsBTfQVraQJPfnSIlbhcHc4p0LDP9kPBG"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

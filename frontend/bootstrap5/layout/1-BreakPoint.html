@@ -6,7 +6,7 @@
     <meta name="viewport" 
           content="width=device-width, 
                    initial-scale=1.0">
-    <title>Complex Bootstrap 5 Layout Example</title>
+    <title>Bootstrap 5 Layout Breakpoints Example</title>
     <!-- Add the Bootstrap CSS link -->
     <link href=
 "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
@@ -22,10 +22,59 @@
             </span>
         </h2>
         <p>
-            Default code has been loaded into the Editor.
+            Default code has been loaded 
+            into the Editor.
         </p>
+        <div>
+           
+            <h2>
+                Bootstrap 5 的 Breakpoints 解释
+            </h2>
+            Bootstrap 5 使用以下默认断点：
+            <ul>
+                <li>xs（默认）：<576px</li>
+                <li>sm：≥576px</li>
+                <li>md：≥768px</li>
+                <li>lg：≥992px</li>
+                <li>xl：≥1200px</li>
+                <li>xxl：≥1400px</li>
+            </ul>
+            在代码中，通过组合 .col-* 类可以实现响应式布局。例如：
+            <ul>
+                <li>.col-12：在所有屏幕下占满 12 列（100% 宽度）。</li>
+                <li>.col-sm-6：在小屏幕及以上占 6 列（50% 宽度）。</li>
+                <li>.col-md-4：在中等屏幕及以上占 4 列（33.33% 宽度）。</li>
+                <li>.col-lg-3：在大屏幕及以上占 3 列（25% 宽度）。</li>
+            </ul>
+             
+        </div>
+        
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-4 bg-primary">
+                Column 1
+            </div>
+            <div class="col-sm-4 bg-info">
+                Column 2
+            </div>
+            <div class="col-sm-4 bg-danger">
+                Column 3
+            </div>
+        </div>
+
+        <div>
+            
+            <p>以下是 <code>xs</code>、<code>sm</code>、<code>md</code>、<code>lg</code>、<code>xl</code> 和 <code>xxl</code> 的含义：</p>
+            <ul>
+                <li><strong>xs (extra small)</strong>：超小屏幕，宽度小于 576px（默认适用于所有屏幕）。</li>
+                <li><strong>sm (small)</strong>：小屏幕，宽度大于或等于 576px。</li>
+                <li><strong>md (medium)</strong>：中等屏幕，宽度大于或等于 768px。</li>
+                <li><strong>lg (large)</strong>：大屏幕，宽度大于或等于 992px。</li>
+                <li><strong>xl (extra large)</strong>：超大屏幕，宽度大于或等于 1200px。</li>
+                <li><strong>xxl (extra extra large)</strong>：超超大屏幕，宽度大于或等于 1400px。</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
                 <div class="card">
                     <img src=
 "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20230310132605/Bootstrap-Tutorial.jpg"
@@ -44,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
                     <img src=
 "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png"
@@ -63,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card">
                     <img src=
 "https://media.geeksforgeeks.org/wp-content/uploads/20190501153200/jumbotron1.png"
@@ -80,6 +129,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
